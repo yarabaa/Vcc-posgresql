@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+input[type="text"], input[type="date"], input[type="email"], input[type="url"], select, textarea {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+textarea {
+    height: 100px;
+}
+
+input[type="file"] {
+    margin-bottom: 10px;
+}
+
+.buttons {
+    margin-top: 10px;
+}
+
+.buttons input {
+    padding: 5px 10px;
+    margin-right: 10px;
+}
+textarea{
+    resize: none;
+}

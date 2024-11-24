@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 4 : Formulaire et Tableaux</title>
+    <link rel="stylesheet" href="exercice3.css">
+</head>
+<body>
+
+    <h1>Vos coordonnées</h1>
+    <form action="" method="post">
+        <table>
+            <tr>
+                <th colspan="2">Vos coordonnées</th>
+            </tr>
+            <tr>
+                <td>Nom :</td>
+                <td><input type="text" name="nom" placeholder="votre nom" /></td>
+            </tr>
+            <tr>
+                <td>Prénom :</td>
+                <td><input type="text" name="prenom" placeholder="votre prénom" /></td>
+            </tr>
+            <tr>
+                <td>Date de naissance :</td>
+                <td><input type="date" name="date_naissance" placeholder="jj/mm/aaaa" /></td>
+            </tr>
+            <tr>
+                <td>Mail :</td>
+                <td><input type="email" name="mail" placeholder="votre mail" /></td>
+            </tr>
+            <tr>
+                <td>Votre site :</td>
+                <td><input type="url" name="site" placeholder="http://www." /></td>
+            </tr>
+            <tr>
+                <td>Code :</td>
+                <td><input type="text" name="code" /></td>
+            </tr>
+            <tr>
+                <td>Homme :</td>
+                <td><input type="radio" name="genre" value="homme" /> Homme 
+                    <input type="radio" name="genre" value="femme" /> Femme
+                </td>
+            </tr>
+            <tr>
+                <td>Votre pays :</td>
+                <td>
+                    <select name="pays">
+                        <option>Votre pays</option>
+                        <option>France</option>
+                        <option>Sénégal</option>
+                        <option>Côte d'Ivoire</option>
+                        <!-- Ajoutez d'autres pays ici -->
+                    </select>
+                </td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <th colspan="2">Vos goûts</th>
+            </tr>
+            <tr>
+                <td>Pommes :</td>
+                <td><input type="checkbox" name="pommes" /> Pommes</td>
+            </tr>
+            <tr>
+                <td>Poires :</td>
+                <td><input type="checkbox" name="poires" /> Poires</td>
+            </tr>
+            <tr>
+                <td>Scoubidous :</td>
+                <td><input type="checkbox" name="scoubidous" /> Scoubidous</td>
+            </tr>
+            <tr>
+                <td>Décrivez vos goûts en détail :</td>
+                <td><textarea name="details"></textarea></td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <th colspan="2">Envoyez nous votre photo</th>
+            </tr>
+            <tr>
+                <td>Choisir le fichier :</td>
+                <td><input type="file" name="photo" /></td>
+            </tr>
+        </table>
+
+        <div class="buttons">
+            <input type="submit" value="Envoyer" />
+            <input type="reset" value="Effacer toutes les données" />
+        </div>
+    </form>
+
+</body>
+</html>

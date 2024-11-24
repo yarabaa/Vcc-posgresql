@@ -1,0 +1,68 @@
+/* Style général du corps de la page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f7f7f7;
+}
+
+/* Style pour les paragraphes */
+p {
+    font-size: 16px;
+    color: #333;
+    margin: 10px 0;
+}
+
+/* Style pour les champs de saisie des montants */
+input[type="number"] {
+    width: 90px;
+    padding: 5px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Style pour le résultat affiché */
+.result {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #0066cc;
+}
+
+/* Style pour la jauge (input range) */
+.slider {
+    width: 300px;
+}
+
+/* Style pour l'affichage de la valeur de la jauge */
+#valeurJauge {
+    font-weight: bold;
+    color: #cc0000;
+    font-size: 18px;
+}
+
+/* Style pour le bouton d'envoi si nécessaire */
+input[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #218838;
+}
+
+/* Style pour l'affichage de la page sur petits écrans */
+@media (max-width: 600px) {
+    .slider {
+        width: 100%;
+    }
+
+    input[type="number"] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

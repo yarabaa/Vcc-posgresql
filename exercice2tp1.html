@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="exercice2tp1.css">
+    <title>Exercice 2 : Formulaire et Calcul</title>
+
+    
+</head>
+<body>
+
+    <!-- Section pour les montants et le calcul -->
+    <p>Entrez deux montants :</p>
+    <input type="number" id="montant1" value="7" oninput="calculerTotal()" />
+    <input type="number" id="montant2" value="9" oninput="calculerTotal()" />
+    
+    <p id="resultatHT" class="result">= 16 CFA HT donc : 18.96 CFA TTC</p>
+    
+    <!-- Section pour l'intervalle avec la jauge -->
+    <p>Intervalle [10,300] :</p>
+    <input type="range" id="jauge" min="10" max="300" step="5" value="10" class="slider" onchange="afficherValeurJauge()" />
+    <p>Vous avez choisi : <span id="valeurJauge">10</span></p>
+
+    <script>
+        // Fonction pour calculer la somme des montants et ajouter la TVA de 18.5%
+        function calculerTotal() {
+            // Récupérer les valeurs des deux montants
+            var montant1 = parseFloat(document.getElementById('montant1').value) || 0;
+            var montant2 = parseFloat(document.getElementById('montant2').value) || 0;
+
+            // Calcul de la somme des montants
+            var totalHT = montant1 + montant2;
+
+            // Appliquer la TVA de 18.5%
+            var totalTTC = totalHT * 1.185;
+
+            // Afficher le résultat dans l'élément avec l'id 'resultatHT'
+            document.getElementById('resultatHT').innerHTML = "= " + totalHT + " CFA HT donc : " + totalTTC.toFixed(2) + " CFA TTC";
+            
+            // Mettre à jour la jauge pour qu'elle reflète le total TTC
+            document.getElementById('jauge').value = totalTTC;
+
+            // Mettre à jour l'affichage de la valeur de la jauge
+            afficherValeurJauge();
+        }
+
+        // Fonction pour afficher la valeur actuelle de la jauge
+        function afficherValeurJauge() {
+            // Récupérer la valeur de la jauge
+            var valeur = document.getElementById('jauge').value;
+
+            // Afficher cette valeur dans l'élément avec l'id 'valeurJauge'
+            document.getElementById('valeurJauge').innerHTML = valeur;
+        }
+
+        // Initialiser l'affichage des résultats au chargement de la page
+        calculerTotal();
+        afficherValeurJauge();
+    </script>
+
+</body>
+</html>
